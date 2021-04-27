@@ -120,6 +120,10 @@ experience %>%
 
 ```
 
+[Fall 2020 Testimonials](https://github.com/akirosingh/CV/blob/de14a69ecccf4760587b2f92245a23c48535b227/docs/fall_2020_feedback.pdf)
+
+[Winter 2021 Testimonials](https://github.com/akirosingh/CV/blob/de14a69ecccf4760587b2f92245a23c48535b227/docs/winter_2021_feedback.pdf)
+
 
 # Honors
 
