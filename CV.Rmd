@@ -1,19 +1,21 @@
 ---
-name: Bryan
-surname: Jenks
-position: "Research Data Anaylst II"
-address: "California Correctional Health Care Services (CCHCS)"
+name: Adam
+surname: Kirosingh
+position: "PhD Candidate"
+address: "Biological Medical Innovations at Stanford University"
 profilepic: "./img/me.jpg"
-www: bryanjenks.xyz
-email: "bryanjenks@protonmail.com"
-github: tallguyjenks
-linkedin: bryanjenks
-orcid: 0000-0002-9604-3069
+phone: +1 702 350 0660
+email: "adamsk@stanford.edu"
+github: akirosingh
+linkedin: adamkirosingh
+orcid: 0000-0003-0500-9269
 date: "`r format(Sys.time(), '%B %Y')`"
-headcolor: 990000
-aboutme: "I have been writing production software in a variety of languages for over 3+ years for California Correctional Health Care Services. I have a deep driven passion for software, automation, and data science. This very CV was even compiled with code."
+headcolor: 414141
+aboutme: "Highly effective microbiologist, with graduate work focusing on maternal immunity during pregnancy. I am interested in the application of data-driven experiments to drive translational research in the context of drug discovery, disease biology characterization, large data analytics for biology, while focused on bridging the gap between the computational and experimental labs through highly engaging and fruitful collaborations."
 docname: CV
 output: vitae::awesomecv
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -21,13 +23,21 @@ knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
                       message = FALSE)
 
+
+pkgs <- c('vitae' ,'here' ,'tinytex' ,'tibble' ,'glue' ,'rmarkdown' ,'dplyr', 'readr' ,'yaml')
+xfun::pkg_attach2(pkgs)
+
+
+
 packages <- c('vitae'     # The CV's LaTeX Template
              ,'tibble'    # Data sctructure for tribbles
              ,'magrittr'  # The Pipe %>%
              ,'here'      # Relative Filepaths
              ,'readr'     # Data Loading
+             ,'tidyverse' # Needed for bind_rows and whatever
+             ,'scholar'   # Updating publications from google scholar
             )
-
+library(magrittr)
 # Install packages not yet installed
 installed_packages <- packages %in% rownames(installed.packages())
 if (any(installed_packages == FALSE)) {
@@ -42,49 +52,74 @@ source(file = here("r","data.r"))
 
 ```
 
-# Employment
+# Technical Skills
 
-```{r EMPLOYMENT}
-
-work %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    why = detail,
-    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
-    where = where
-  )
-
-```
-
-# Education
-
-```{r EDUCATION}
-
-edu %>%
-  detailed_entries(
-    with = inst,
-    what = degree,
-    why = detail,
-    when = glue::glue("{startYear} --> {endYear}",.na = ""),
-    where = where
-  )
-
-```
-
-# Skills
-
-```{r SKILLS}
+```{r TECHNICAL SKILLS}
 
 skills %>%
   detailed_entries(
     with = area,
-    what = skills
+    what = skills, .protect = F
   )
 
 ```
 
-\pagebreak
+
+# Education
+
+```{r EDUCATION}
+# I can't be bothered for the orcid token stuff right now so I'll just dput the output and paste it in to work with knitr 
+#rorcid::orcid_auth()
+# orcid_token <- "e54bd0c6-3417-446c-bfd3-24895668067b"
+# 
+# edu <- do.call("bind_rows",
+#   rorcid::orcid_educations("0000-0003-0500-9269")$`0000-0003-0500-9269`$`affiliation-group`$summaries
+# )
+# 
+# edu %>%
+#   detailed_entries(
+#     what = `education-summary.role-title`,
+#     when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+#     with = `education-summary.organization.name`,
+#     where = `education-summary.organization.address.city`
+#   ) %>%
+#   dput()
+
+
+structure(list(what = c("PhD Microbiology & Immunology", "BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry", 
+"Diploma"), when = structure(c("2017 - NA", "2013 - 2017", "2009 - 2013"
+), class = c("glue", "character")), with = c("Stanford University", 
+"University of Nevada Reno", "Coronado High School"), where = c("Stanford", 
+"Reno", "Henderson"), why = list(character(0), character(0), 
+    character(0))), row.names = c(NA, 3L), groups = structure(list(
+    what = c("BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry", 
+    "Diploma", "PhD Microbiology & Immunology"), when = structure(c("2013 - 2017", 
+    "2009 - 2013", "2017 - NA"), class = c("glue", "character"
+    )), with = c("University of Nevada Reno", "Coronado High School", 
+    "Stanford University"), where = c("Reno", "Henderson", "Stanford"
+    ), .rows = structure(list(2L, 3L, 1L), ptype = integer(0), class = c("vctrs_list_of", 
+    "vctrs_vctr", "list"))), row.names = c(NA, -3L), class = c("tbl_df", 
+"tbl", "data.frame"), .drop = TRUE), class = c("vitae_detailed", 
+"vitae_preserve", "grouped_df", "tbl_df", "tbl", "data.frame"
+), preserve = c("what", "when", "with", "where", "why"), protect = TRUE)
+
+```
+
+# Experience
+
+```{r Experience, results = "asis"}
+
+experience %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
 
 # Honors
 
@@ -101,47 +136,29 @@ honors %>%
 
 ```
 
-# Projects
 
-```{r PROJECTS}
+# Publications
 
-projects %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where
-  )
+```{r PUBLICATIONS}
+bibliography_entries("akirosingh.bib") %>%
+  arrange(desc(issued))
 
+
+
+# I wanted to bold my name in the publications but didn't like how it turned out with the detailed entries. I might revisit this with just bullet points instead.
+# library(stringr)
+# google_scholar <- scholar::get_publications("9MvwMykAAAAJ") 
+# google_scholar %>%
+#   mutate(bauthors = str_replace(author,"A Kirosingh", "**A Kirosingh**"),bauthors = str_replace(bauthors,"AS Kirosingh", "**A Kirosingh**")) %>% 
+#   detailed_entries(
+#     what = title,
+#     when = year,
+#     with = bauthors,
+#     where = journal,
+#     why = NA
+#   )
 ```
 
-# Works
+# References
 
-```{r WORKS}
-
-works %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where
-  )
-
-```
-
-# Certifications
-
-```{r CERTIFICATIONS}
-
-certifications %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where
-  )
-
-```
+References will be provided upon request.
