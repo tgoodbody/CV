@@ -2,8 +2,8 @@
 name: Adam
 surname: Kirosingh
 position: "PhD Candidate"
-address: "Biological Medical Innovations at Stanford University"
-profilepic: "./img/me.jpg"
+address: "Stanford University, California"
+#profilepic: "./img/me.jpg"
 phone: +1 702 350 0660
 email: "adamsk@stanford.edu"
 github: akirosingh
@@ -11,7 +11,6 @@ linkedin: adamkirosingh
 orcid: 0000-0003-0500-9269
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
-aboutme: "Highly effective microbiologist, with graduate work focusing on maternal immunity during pregnancy. I am interested in the application of data-driven experiments to drive translational research in the context of drug discovery, disease biology characterization, large data analytics for biology, while focused on bridging the gap between the computational and experimental labs through highly engaging and fruitful collaborations."
 docname: CV
 output: vitae::awesomecv
 editor_options: 
@@ -36,6 +35,7 @@ packages <- c('vitae'     # The CV's LaTeX Template
              ,'readr'     # Data Loading
              ,'tidyverse' # Needed for bind_rows and whatever
              ,'scholar'   # Updating publications from google scholar
+             ,'kableExtra'# Adding technicalskills table
             )
 library(magrittr)
 # Install packages not yet installed
@@ -52,77 +52,116 @@ source(file = here("r","data.r"))
 
 ```
 
-# Technical Skills
 
-```{r TECHNICAL SKILLS}
-
-skills %>%
-  detailed_entries(
-    with = area,
-    what = skills, .protect = F
-  )
-
-```
 
 
 # Education
 
 ```{r EDUCATION}
-# I can't be bothered for the orcid token stuff right now so I'll just dput the output and paste it in to work with knitr 
-#rorcid::orcid_auth()
-# orcid_token <- "e54bd0c6-3417-446c-bfd3-24895668067b"
-# 
-# edu <- do.call("bind_rows",
-#   rorcid::orcid_educations("0000-0003-0500-9269")$`0000-0003-0500-9269`$`affiliation-group`$summaries
-# )
-# 
-# edu %>%
-#   detailed_entries(
-#     what = `education-summary.role-title`,
-#     when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
-#     with = `education-summary.organization.name`,
-#     where = `education-summary.organization.address.city`
-#   ) %>%
-#   dput()
-
-
-structure(list(what = c("PhD Microbiology & Immunology", "BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry", 
-"Diploma"), when = structure(c("2017 - NA", "2013 - 2017", "2009 - 2013"
+structure(list(what = c("PhD Microbiology & Immunology", "BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry"), when = structure(c("2022", "2017"
 ), class = c("glue", "character")), with = c("Stanford University", 
-"University of Nevada Reno", "Coronado High School"), where = c("Stanford", 
-"Reno", "Henderson"), why = list(character(0), character(0), 
-    character(0))), row.names = c(NA, 3L), groups = structure(list(
-    what = c("BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry", 
-    "Diploma", "PhD Microbiology & Immunology"), when = structure(c("2013 - 2017", 
-    "2009 - 2013", "2017 - NA"), class = c("glue", "character"
-    )), with = c("University of Nevada Reno", "Coronado High School", 
-    "Stanford University"), where = c("Reno", "Henderson", "Stanford"
-    ), .rows = structure(list(2L, 3L, 1L), ptype = integer(0), class = c("vctrs_list_of", 
-    "vctrs_vctr", "list"))), row.names = c(NA, -3L), class = c("tbl_df", 
+"University of Nevada, Reno"), where = c("Stanford, CA", 
+"Reno, NV"), why = list("Dissertation - Malaria susceptibility: genetic factors and immune adaptation during pregnancy", "Honors Thesis - In vivo distribution and clearance of purified capsular polysaccharide from Burkholderia pseudomallei in a Murine Model")), row.names = c(NA, 2L), groups = structure(list(
+    what = c("BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry with Honors", 
+    "High School Diploma", "PhD Microbiology & Immunology"), when = structure(c("2017", 
+    "2013", "2022"), class = c("glue", "character"
+    )), with = c("University of Nevada, Reno", 
+    "Stanford University"), where = c("Reno, NV", "Stanford, CA"
+    ), .rows = structure(list(2L, 1L), ptype = integer(0), class = c("vctrs_list_of", 
+    "vctrs_vctr", "list"))), row.names = c(NA, -2L), class = c("tbl_df", 
 "tbl", "data.frame"), .drop = TRUE), class = c("vitae_detailed", 
 "vitae_preserve", "grouped_df", "tbl_df", "tbl", "data.frame"
 ), preserve = c("what", "when", "with", "where", "why"), protect = TRUE)
 
 ```
 
-# Experience
+# Research
 
-```{r Experience, results = "asis"}
+```{r Research, results = "asis"}
 
-experience %>%
+research %>%
   detailed_entries(
     with = title,
     what = unit,
     why = detail,
     when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
-    where = where
+    where = where, .protect = F
   )
 
 ```
 
-[Fall 2020 Testimonials](https://github.com/akirosingh/CV/blob/de14a69ecccf4760587b2f92245a23c48535b227/docs/fall_2020_feedback.pdf)
+# Teaching
 
-[Winter 2021 Testimonials](https://github.com/akirosingh/CV/blob/de14a69ecccf4760587b2f92245a23c48535b227/docs/winter_2021_feedback.pdf)
+```{r Teaching, results = "asis"}
+
+teaching %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where, .protect = F
+  )
+
+```
+
+# Leadership
+
+```{r Leadership, results = "asis"}
+
+leadership %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where, .protect = F
+  )
+
+```
+
+# Relevant Courses
+
+```{r}
+
+UNR <- c("MATH 420: Mathmatical Modeling",
+"MATH 461: Probability Theory",
+"MATH 462: Introduction to Stochastic Processes",
+"STAT 467: Statistical Theory")
+Stanford <- c("BIOS 221: Modern Statistics for Modern Biology","CME 193: Introduction to Scientific Python")
+ 
+classes <- tibble(title =c(rep("Stanford University",length(Stanford)),rep("University of Nevada, Reno", length(UNR))), detail = c(Stanford,UNR))
+
+classes %>%
+  detailed_entries(
+    what = title,
+    why = detail, .protect = F
+  )
+```
+
+
+# Technical Skills 
+
+<!-- \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}} -->
+
+<!-- \par\noindent\nobreak\vspace{-30pt}\rule{\textwidth}{1pt} -->
+
+```{r techtable, results='markup'}
+tribble(
+   ~`Coding Languages`, ~Software, ~`Markup Languages`,
+  "R, Python, Mathematica, MATLAB",
+  "GIT, SLURM, High-Performance Computing",
+  "CSS, HTML, \\LaTeX, RMarkdown, Bootstrap"
+) %>%
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
+  kable_styling(full_width = F, font_size = 9,latex_options = "hold_position") %>% 
+  row_spec(0, bold = T, color = "#414141") %>% 
+  row_spec(1, bold = F, color = "#7f7f7f") %>% 
+  column_spec(column = 1:3, width = '4.75cm')
+```
+
+
+<!-- \smallskip -->
 
 
 # Honors
@@ -143,26 +182,22 @@ honors %>%
 
 # Publications
 
-```{r PUBLICATIONS}
-bibliography_entries("akirosingh.bib") %>%
-  arrange(desc(issued))
+- **Kirosingh, A.S.**, De La Parte, L., Ty, M., Kakuru, A., Muhindo, M. K., Thulin, N., Kamya, M., Feeney, M., Dorsey, G., Wang, T.T., Jagannathan P., Cellular correlates for protection against malaria acquired across multiple pregnancies (manuscript in preparation)
+
+- **Kirosingh, A.S.**, Gupta, A.S., Chevee, V., Davis, N., Cumnock, K., Lissner, M., Schneider, D.S. Malaria Susceptibility Loci Identified in the Diversity Outbred Mouse Population  (manuscript in preparation)
+
+- Hurtado, P.J., **Kirosingh, A.S.**, 2019. Generalizations of the ‘Linear Chain Trick’: incorporating more flexible dwell time distributions into mean field ODE models. J. Math. Biol. 79, 1831–1883. https://doi.org/10.1007/s00285-019-01412-w
+
+- Nualnoi, T., **Kirosingh, A.**, Pandit, S.G., Thorkildson, P., Brett, P.J., Burtnick, M.N., AuCoin, D.P., 2016. In vivo Distribution and Clearance of Purified Capsular Polysaccharide from Burkholderia pseudomallei in a Murine Model. PLOS Neglected Tropical Diseases 10, e0005217. https://doi.org/10.1371/journal.pntd.0005217
+
+- Nualnoi, T., **Kirosingh, A.**, Basallo, K., Hau, D., Gates-Hollingsworth, M.A., Thorkildson, P., Crump, R.B., Reed, D.E., Pandit, S., AuCoin, D.P., 2018. Immunoglobulin G subclass switching impacts sensitivity of an immunoassay targeting Francisella tularensis lipopolysaccharide. PLOS ONE 13, e0195308. https://doi.org/10.1371/journal.pone.0195308
+
+## Published Abstracts
+
+- Hurtado, P., **Kirosingh, A.**, 2018. The Generalized Linear Chain Trick: A new tool to build ODE models with more flexible dwell-time distributions. Presented at the 2018 ESA Annual Meeting (August 5 -- 10), ESA.
+
+- **Kirosingh, A.**, 2017. PROBABILITY DISTRIBUTIONS OF SYSTEM AVERAGE INTERRUPTION FREQUENCY INDEX. Presented at the 2017 AAAS Annual Meeting (February 16-20, 2017), AAAS.
 
 
 
-# I wanted to bold my name in the publications but didn't like how it turned out with the detailed entries. I might revisit this with just bullet points instead.
-# library(stringr)
-# google_scholar <- scholar::get_publications("9MvwMykAAAAJ") 
-# google_scholar %>%
-#   mutate(bauthors = str_replace(author,"A Kirosingh", "**A Kirosingh**"),bauthors = str_replace(bauthors,"AS Kirosingh", "**A Kirosingh**")) %>% 
-#   detailed_entries(
-#     what = title,
-#     when = year,
-#     with = bauthors,
-#     where = journal,
-#     why = NA
-#   )
-```
 
-# References
-
-References will be provided upon request.
