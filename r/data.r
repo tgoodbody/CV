@@ -1,115 +1,102 @@
+
+education <- tribble(
+    ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+    "University of British Columbia", "PhD Remote Sensing of Forests", "May", 2015, "March", 2019, "Vancouver, BC",
+    "Assessing the role of digital aerial photogrammetry for characterizing forest structure and enhancing forest inventories",
+    "University of British Columbia", "BSc Natural Resources Conservation (Hons.\\& Co-op)", "September", 2010, "January", 2015, "Vancouver, BC",
+    "Science and Management Major. \\begin{itemize}
+        \\item Cons 330: Conservation Policy
+        \\item FRST 443: Remote Sensing Of Ecosystem Management
+        \\item CONS 451: Integrated Field School
+    \\end{itemize}"
+)
+
+
 skills <- tribble(
     ~area, ~skills,
-    "Programming Languages", "R, Python, Mathematica, MATLAB",
-    "Markup Languages", "CSS, HTML, \\LaTeX, RMarkdown, Bootstrap",
-    "Software Development", "GIT, SLURM, High-Performance Computing",
-    "Text Editors", "RStudio, VIM, Visual Studio Code",
+    "Project Management", "Effective Planning, Organization, Communication, Implementation",
+    "Technical Writing", "Publications, Official Reports, Funding Grants",
+    "Data Analytics", " R, Management, Manipulation, Visualization, Interpretation",
+    "Visual Communitation", "Effective Scientific Graphics and Design",
 )
 
-honors <- tribble(
+awards <- tribble(
     ~area, ~accomplishment, ~year, ~where, ~detail,
-    "Cellular Molecular Biology Trainee", "NIH training program for Stanford Bioscience PhD Students", 2019, "Stanford, CA", NA,
-    "Honors Undergraduate Research Award", "Granted to Honors students with exceptional theses", 2016, "University of Nevada, Reno", "Honors Thesis: In vivo distribution of B. pseudomallei capsular polysaccharide",
-    "Poster Award for SACNAS Diversity Conference", "Awarded by SACNAS to less than 5% of poster presenters at annual conference", 2016, "Long Beach, CA", "Poster: Probability distributions of system average interruption frequency index",
-    "Barry M. Goldwater Scholarship Honorable Mention", "Awarded for excellent applications to the goldwater scholarship", 2016, "Saint Peter, MN", "Proposal on Immunoglobulin G Subclass Switching Impacts Sensitivity of an Immunoassay Targeting Francisella Tularensis Lipopolysaccharide",
-    "Nevada Undergraduate Research Award", "Given to undergraduate students with promising research proposals", 2014, "University of Nevada, Reno", "Awarded 3 consecutive years",
-    "American Society for Microbiology Undergraduate Research Fellow", "Competitive national fellowship for research in Microbiology ", 2016, "Washington, DC", "Led to a poster presentation at ASM Microbe 2017",
-    "Nevada INBRE Undergraduate Research Opportunity Program", "Funding for undergraduate research in biosciences", 2015, "University of Nevada, Reno", NA,
-    "Ronald E. McNair Post-Baccalaureate Achievement Program Scholar", "Scholars program for first-generation college students pursuing higher education", 2014, "University of Nevada, Reno", NA
+    "PhD Funding", "NSERC PGSD", 2018, "Vancouver, BC", NA,
+    "PhD Funding", "Harry G. Smith Scholarship", 2018, "Vancouver, BC", NA
 )
-
 
 experience <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "\\href{https://undergrad.stanford.edu/people/adam-kirosingh}{Graduate Writing Tutor}", "Hume Center for Writing and Speaking", "June", 2020, "Present", NA, "Stanford - California", "Tutor undergraduates and graduate students virtualy one-on-one at all stages of the writing process ranging from scholarship applications to written class assignments.
-   \\begin{itemize}
-     \\item \\href{https://github.com/akirosingh/CV/blob/de14a69ecccf4760587b2f92245a23c48535b227/docs/winter_2021_feedback.pdf}{Winter 2021 Testimonials}
-     \\item \\href{https://github.com/akirosingh/CV/blob/43bc8932180c69404f7dfa6d5604b4c1133f24e8/docs/fall_2020_feedback.pdf}{Fall 2020 Testimonials} 
-   \\end{itemize}",
-    "Graduate Student Researcher", "Jagannathan Lab", "October", 2020, "Present", NA, "Stanford, CA", 
-    "Investigate cellular correlates for acquired immunity against placental malaria in pregnant mothers from Uganda. \\begin{itemize}
-        \\item Culture VAR2CSA expressing \\emph{Plasmodium falciparum}.
-        \\item Fluorescent activated cell-sorting and bulk RNA sequencing.
-        \\item Flow cytometry and analysis of large datasets.
+    "Post-Doctoral Fellow", "Faculty of Forest Resources Management (UBC)", "June", 2019, "Present", NA, "Vancouver, BC",
+    "Assessment of wood attributes using remote sensing (AWARE) \\& Canadian Wood Fibre Center Forest Innovation Program. \\begin{itemize}
+        \\item Mentor graduate students on remote sensing practices and routines
+        \\item Developed lidar processing and analysis frameworks to enhance forest inventory knowledge
+        \\item Developed a structurally guided sampling package sgsR
+        \\item Collaborated with international govnerment, industry, and academic partners
     \\end{itemize}",
-    "Graduate Student Researcher", "Schneider Lab", "July", 2018, "September", 2020, "Stanford, CA", 
-    "Identify new genetic loci associated with resistance to malaria infection in a \\emph{Plasmodium chabaudi} diversity outbred model. \\begin{itemize}
-        \\item Genetic loci mapping with multiparent populations with r\\qtl2.
-        \\item Handle Mice using \\emph{Plasmodium chabaudi} infection model.
+    "Teaching assistant", "Faculty of Forest Resources Management (UBC)", "May", 2015, "March", 2019, "Vancouver, BC",
+    "Leading \\& superving applied exercises to guide student knowledge of remote sensing concepts. \\begin{itemize}
+        \\item Guiding students to success in written and oral submissions 
+        \\item FRST 443 - Remote sensing for ecosystem management (Undergraduate)
+        \\item FRST 521 - Advanced earth observation and image processing (Graduate)
+        \\item Held weekly office hours, guest lectured, developed and graded assignments and research proposals
     \\end{itemize}",
-    "Teaching Assistant", "Microbial Pathogenesis", "April", 2020, "June", 2020, "Remote Learning", 
-    "Held weekly office hours, guest lectured, developed and graded research proposals",
-    "Social Entrepeneurship Team Member", "WARC", "July", 2019, "September", 2019, "Tormabum, Sierra Leone", 
-    "Investigating cellular correlates for acquired immunity against placental malaria in pregnant mothersfrom Uganda. \\begin{itemize}
-        \\item Prototyping, testing and manufacturing a half-ton scale maize-drying machine
-        \\item Partnering with WARC (West African Rice Company) and FINIC Industries to build and implement maize dryer
+    "Planning Forester Intern - Co-op", "Chetwynd Forest Industries - West Fraser Mills LTD.", "May", 2014, "December", 2014, "Chetwynd, BC",
+    "Working in a team and individually to implement West Fraser Management objectives. \\begin{itemize}
+        \\item Site plan preparation
+        \\item Harvest planning \\& layout
+        \\item Silviculture assessments and reforestation quality inspections
+        \\item post-fire salvage planning and management
+        \\item GIS management
+        \\item Forest appraisals
     \\end{itemize}",
-    "\\href{https://extreme.stanford.edu/projects/skincubated/}{Design Consultant}", "Noora Health", "February", 2019, "June", 2019, "Bangalore, India", 
-    "Designed a newborn health education kit to encourage kangaroo care in mothers of low birthweight babies in India \\begin{itemize}
-        \\item Prototyping education material using Microsoft Illustrator
-        \\item User-testing with new mothers in hospitals and home visits
-    \\end{itemize}",
-    "Undergraduate Researcher", "Hurtado Group", "October", 2016, "August", 2018, "University of Nevada, Reno", 
-    "Generalized the linear chain trick using properties of erlang distributions to translate stochastic integrodifferential equations into simpler ordinary differential equations for modelers.",
-    "Undergraduate Researcher", "AuCoin Lab", "February", 2014, "May", 2017, "University of Nevada, Reno",
-    "Verified \\emph{Burkholderia pseudomallei} capsular polysaccharide as a viable biomarker in a murine model. Cultured Leptospirosis interrogans. Subclass switched antibodies decrease limit of detection of a lateral flow immunoassay. \\begin{itemize}
-        \\item Culturing Hybridoma cell lines in bioreactors for antibodies
-        \\item Measuring clearance kinetics of capsular polysaccharide
-        \\item Optimized Ig subclass for lateral flow immunoassay using ELISAs
+    "Planning Forester Intern - Co-op", "Alex Fraser Research Forest (UBC)", "May", 2013, "September", 2013, "Williams Lake, BC",
+    "Implemented planning and management perscriptions. \\begin{itemize}
+        \\item Road \\& timber layout
+        \\item Timber cruising
+        \\item Volume determination
+        \\item Avian habitat assessments
     \\end{itemize}"
 )
 
-research <- tribble(
+presentations <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "Graduate Student Researcher", "Jagannathan Lab - Department of Medicine ", "October", 2020, "Present", NA, "Stanford University", 
-    "Investigate cellular correlates for acquired immunity against placental malaria in pregnant mothers from Uganda. \\begin{itemize}
-        \\item Culture VAR2CSA expressing \\emph{Plasmodium falciparum}.
-        \\item Fluorescent activated cell-sorting and bulk RNA sequencing.
-        \\item Flow cytometry and analysis of large datasets.
-    \\end{itemize}",
-    "Graduate Student Researcher", "Schneider Lab - Department of Microbiology \\& Immunology", "July", 2018, "September", 2020, "Stanford University", 
-    "Identify new genetic loci associated with resistance to malaria infection in a \\emph{Plasmodium chabaudi} diversity outbred model. \\begin{itemize}
-        \\item Genetic loci mapping with multiparent populations with qtl2 package.
-        \\item Handle Mice using \\emph{Plasmodium chabaudi} infection model.
-    \\end{itemize}",
-    "Undergraduate Researcher", "Hurtado Group - Department of Mathematics \\& Statistics", "October", 2016, "August", 2018, "University of Nevada, Reno", 
-    "Generalized the linear chain trick using properties of erlang distributions to translate stochastic integrodifferential equations into simpler ordinary differential equations for modelers.",
-    "Undergraduate Researcher", "AuCoin Lab - Department of Microbiology \\& Immunology", "February", 2014, "May", 2017, "University of Nevada, Reno",
-    "Verified \\emph{Burkholderia pseudomallei} capsular polysaccharide as a viable biomarker in a murine model. Cultured Leptospirosis interrogans. Subclass switched antibodies decrease limit of detection of a lateral flow immunoassay. \\begin{itemize}
-        \\item Culturing Hybridoma cell lines in bioreactors for antibodies.
-        \\item Measuring clearance kinetics of capsular polysaccharide.
-        \\item Optimized Ig subclass for lateral flow immunoassay using ELISAs.
-    \\end{itemize}"
+    "AWARE E-lecture Series", "Digital Photogrammetric Applications to Enhanced Forest Inventory", "October", 2019, NA, NA, "Online",
+    NA,
+    "Silvilaser", "Uncovering spatial and ecological variability in gap size frequency distributions in the Canadian boreal forest", "October", 2019, NA, NA, "Foz de Iguazu, Brazil",
+    NA,
+    "CIF-IFC Workshop", "Examining potential applications of UAS/UAV’s and digital photogrammetry for various forest management purposes", "April", 2019, NA, NA, "Edmonton, AB",
+    NA,
+    "FRI Forest Practitioners Conference", "Assessing the status of forest regeneration using digital aerial photogrammetry and unmanned aerial systems", "October", 2018, NA, NA, "Edmonton, AB",
+    NA,
+    "AWARE Instructional Sessions", "LiDAR theory, processing and implementation workshop", "February", 2018, NA, NA, "Kamloops, BC",
+    NA,
+    "AWARE Instructional Sessions", "LiDAR theory, processing and implementation workshop", "October", 2017, NA, NA, "Huntsville, ON",
+    NA,
+    "AWARE Instructional Sessions", "LiDAR theory, processing and implementation workshop", "October", 2017, NA, NA, "Kapuskasing, ON",
+    NA,
+    "AWARE Instructional Sessions", "LiDAR theory, processing and implementation workshop", "October", 2017, NA, NA, "Quesnel, BC",
+    NA,
+    "Silvilaser", "Assessing the capacity of DAP to enhance inventory knowledge of Spruce Budworm affected forests", "November", 2017, NA, NA, "Blacksburg, USA",
+    NA,
+    "Symposium on Systems and Analysis in Forest Resources", "Updating airborne laser scanning EFI metrics using UAV acquired DAP point clouds", "August", 2017, NA, NA, "Suquamish, USA",
+    NA,
+    "UAV and Remote Sensing Workshop", "UAV and Digital Photogrammetry for forestry purposes", "July", 2017, NA, NA, "Nanjing, China",
+    NA,
+    "Assessment of Wood Attributes for Remote Sensing AGM", "Assessing the capacity of DAP to enhance inventory knowledge of Spruce Budworm affected forests", "May", 2017, NA, NA, "Edmunston, NB",
+    NA,
+    "ForestSAT", "Modelling residual stand volume using unmanned aerial vehicles and digital aerial photogrammetry", "November", 2016, NA, NA, "Santiago, Chile",
+    NA,
+    "FP Innovations UAV Workshop", "UAVs and the University of British Columbia", "October", 2016, NA, NA, "Courtney, BC",
+    NA,
+    "Canadian Remote Sensing Symposium", "Modelling residual stand volume using unmanned aerial vehicles and digital aerial photogrammetry", "June", 2016, NA, NA, "Winnepeg, MB",
+    NA,
+    "Southern Interior Silviculture Committee", "DAP point clouds acquired from Unmanned Aerial Systems (UAS) for enhancing forest inventories", "February", 2016, NA, NA, "Kamloops, BC",
+    NA,
+    "Alex Fraser Research Forest Proof of Concept Workshop", "Research in use of drones to update LiDAR forest inventories. LiDAR High Resolution Inventory for the IDF", "June", 2015, NA, NA, "Williams Lake, BC", NA
+    
 )
 
-leadership <- tribble(
-    ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "Data Analyst", "Karuna Initiative", "June", 2019, "September", 2019, "Tormabum, Sierra Leone", 
-    "Lead community reports for summer pilot  \\begin{itemize}
-        \\item Summarize timeseries data of 60 students wellbeing.
-        \\item Identify trends in community responses to advise graduate student policy.
-    \\end{itemize}",
-    "Social Entrepeneurship Team Member", "WARC", "July", 2019, "September", 2019, "Tormabum, Sierra Leone",
-    "Establishing a low-cost drying machine in rural Sierra Leone for subsistence farmers. \\begin{itemize}
-        \\item Prototyping, testing and manufacturing a half-ton scale maize-drying machine.
-        \\item Partnering with WARC (West African Rice Company) and FINIC Industries to build and implement maize dryer.
-    \\end{itemize}",
-    "\\href{https://extreme.stanford.edu/projects/skincubated/}{\\color{black}{Design Consultant}}", "Noora Health", "February", 2019, "June", 2019, "Bangalore, India", 
-    "Designed a newborn \\href{https://extreme.stanford.edu/projects/skincubated/}{\\color{black}{health education kit}} to encourage kangaroo care in mothers of low birthweight babies in India. \\begin{itemize}
-        \\item Prototyping education material using Adobe Illustrator.
-        \\item User-testing with new mothers in hospitals and home visits.
-    \\end{itemize}"
-)
-
-teaching <- tribble(
-    ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
-    "\\href{https://undergrad.stanford.edu/people/adam-kirosingh}{\\color{black}{Graduate Writing Tutor}}", "Hume Center for Writing and Speaking", "June", 2020, "Present", NA, "Stanford University", "Tutor undergraduates and graduate students virtualy one-on-one at all stages of the writing process ranging from scholarship applications to written class assignments.
-   \\begin{itemize}
-     \\item \\href{https://github.com/akirosingh/CV/blob/de14a69ecccf4760587b2f92245a23c48535b227/docs/winter_2021_feedback.pdf}{\\color{black}{Winter 2021 Testimonials}} - I most appreciated his enthusiasm and encouraging attitude, since it made me less nervous about sharing my writing and getting feedback on it!
-     \\item \\href{https://github.com/akirosingh/CV/blob/43bc8932180c69404f7dfa6d5604b4c1133f24e8/docs/fall_2020_feedback.pdf}{\\color{black}{Fall 2020 Testimonials}} - Adam made the session really comfortable and low stress which helped me get through the material and feel comfortable asking questions!
-   \\end{itemize}",
-    "Teaching Assistant", "Microbial Pathogenesis", "April", 2020, "June", 2020, "Remote Learning", 
-    "Held weekly office hours, guest lectured, developed and graded research proposals",
-)
 
 # "title", "unit", "startMonth", "startYear", "endMonth", "endYear", "where", "detail"
