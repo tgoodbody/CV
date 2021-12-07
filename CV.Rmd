@@ -1,14 +1,13 @@
 ---
-name: Adam
-surname: Kirosingh
-position: "PhD Candidate"
-address: "Stanford University, California"
+name: Tristan
+surname: Goodbody
+position: "Post-Doctoral Fellow"
+address: "University of British Columbia, Vancouver"
 #profilepic: "./img/me.jpg"
-phone: +1 702 350 0660
-email: "adamsk@stanford.edu"
-github: akirosingh
-linkedin: adamkirosingh
-orcid: 0000-0003-0500-9269
+phone: +604 992 1327
+email: "tristan.goodbody@ubc.ca"
+github: tgoodbody
+orcid: 0000-0002-6894-7925
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
 docname: CV
@@ -58,15 +57,15 @@ source(file = here("r","data.r"))
 # Education
 
 ```{r EDUCATION}
-structure(list(what = c("PhD Microbiology & Immunology", "BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry"), when = structure(c("2022", "2017"
-), class = c("glue", "character")), with = c("Stanford University", 
-"University of Nevada, Reno"), where = c("Stanford, CA", 
-"Reno, NV"), why = list("Dissertation - Malaria susceptibility: genetic factors and immune adaptation during pregnancy", "Honors Thesis - In vivo distribution and clearance of purified capsular polysaccharide from Burkholderia pseudomallei in a Murine Model")), row.names = c(NA, 2L), groups = structure(list(
-    what = c("BSc Molecular Microbiology & Immunology with Minors in Mathematics & Chemistry with Honors", 
-    "High School Diploma", "PhD Microbiology & Immunology"), when = structure(c("2017", 
+structure(list(what = c("PhD Remote Sensing of Forests", "BSc Natural Resources Conservation with Honors"), when = structure(c("2019", "2015"
+), class = c("glue", "character")), with = c("University of British Columbia", 
+"University of British Columbia"), where = c("Vancouver, BC", 
+"Vancouver, BC"), why = list("Assessing the role of digital aerial photogrammetry for characterizing forest structure and enhancing forest inventories", "Science and Management Major")), row.names = c(NA, 2L), groups = structure(list(
+    what = c("BSc Natural Resources Conservation with Honors", 
+    "High School Diploma", "PhD Remote Sensing of Forests"), when = structure(c("2017", 
     "2013", "2022"), class = c("glue", "character"
-    )), with = c("University of Nevada, Reno", 
-    "Stanford University"), where = c("Reno, NV", "Stanford, CA"
+    )), with = c("University of British Columbia", 
+    "University of British Columbia"), where = c("Vancouver, BC", "Vancouver, BC"
     ), .rows = structure(list(2L, 1L), ptype = integer(0), class = c("vctrs_list_of", 
     "vctrs_vctr", "list"))), row.names = c(NA, -2L), class = c("tbl_df", 
 "tbl", "data.frame"), .drop = TRUE), class = c("vitae_detailed", 
