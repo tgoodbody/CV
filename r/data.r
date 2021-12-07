@@ -36,10 +36,10 @@ experience <- tribble(
         \\item Collaborated with international govnerment, industry, and academic partners
     \\end{itemize}",
     "Teaching assistant", "Faculty of Forest Resources Management (UBC)", "May", 2015, "March", 2019, "Vancouver, BC",
-    "Leading \\& superving applied exercises to guide student knowledge of remote sensing concepts. \\begin{itemize}
+    "Leading \\& supervising applied exercises to guide student knowledge of remote sensing concepts. \\begin{itemize}
         \\item Guiding students to success in written and oral submissions 
-        \\item FRST 443 - Remote sensing for ecosystem management (Undergraduate)
-        \\item FRST 521 - Advanced earth observation and image processing (Graduate)
+        \\item FRST 443 - Remote sensing for ecosystem management
+        \\item FRST 521 - Advanced earth observation and image processing
         \\item Held weekly office hours, guest lectured, developed and graded assignments and research proposals
     \\end{itemize}",
     "Planning Forester Intern - Co-op", "Chetwynd Forest Industries - West Fraser Mills LTD.", "May", 2014, "December", 2014, "Chetwynd, BC",
@@ -66,7 +66,7 @@ presentations <- tribble(
     NA,
     "Silvilaser", "Uncovering spatial and ecological variability in gap size frequency distributions in the Canadian boreal forest", "October", 2019, NA, NA, "Foz de Iguazu, Brazil",
     NA,
-    "CIF-IFC Workshop", "Examining potential applications of UAS/UAV’s and digital photogrammetry for various forest management purposes", "April", 2019, NA, NA, "Edmonton, AB",
+    "CIF-IFC Workshop", "Examining potential applications of UAS and digital photogrammetry for various forest management purposes", "April", 2019, NA, NA, "Edmonton, AB",
     NA,
     "FRI Forest Practitioners Conference", "Assessing the status of forest regeneration using digital aerial photogrammetry and unmanned aerial systems", "October", 2018, NA, NA, "Edmonton, AB",
     NA,
