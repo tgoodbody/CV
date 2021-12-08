@@ -3,7 +3,7 @@ name: Tristan RH
 surname: Goodbody
 position: "Remote Sensing of Forests Specialist"
 address: "University of British Columbia, Vancouver"
-#profilepic: "./img/me.jpg"
+profilepic: "./img/me.jpg"
 phone: +604 992 1327
 email: "tristan.goodbody@ubc.ca"
 github: tgoodbody
@@ -78,24 +78,31 @@ education %>%
   )
 
 ```
-
-# Technical Skills 
-
-```{r techtable, results='markup'}
-tribble(
-   ~`Project Management`, ~`Technical Writing`, ~`Data Analytics`,
-  "Effective Planning, Organization, Communication, Implementation",
-  "Publications, Official Reports, Funding Grants",
-  "R, Management, Manipulation, Visualization, Interpretation",
-) %>%
-  kable(booktabs = T, align = 'c', escape = F, format = "latex") %>%
-  kable_styling(full_width = F, font_size = 9,latex_options = "hold_position") %>% 
-  row_spec(0, bold = T, color = "#414141") %>% 
-  row_spec(1, bold = F, color = "#7f7f7f") %>% 
-  column_spec(column = 1:3, width = '4.75cm')
-```
-
 \pagebreak
+
+# Skills
+
+\begin{cvskills}
+  \cvskill
+    {Data Science}
+    {R (Advanced: developed sgsR package), ArcPy}
+
+  \cvskill
+    {Research}
+    {Forest modelling, inventory analysis, lidar processing, digital aerial photogrammetry, raster analysis}
+
+  \cvskill
+    {Writing}
+    {Scientific publications, public reports, funding grants, reproducible reporting (Rmarkdown)}
+    
+  \cvskill
+    {Communication}
+    {Confident public speaker, effective graphic design}  
+
+  \cvskill
+    {Languages}
+    {English/Spanish (bilingual)}
+\end{cvskills}
 
 # Awards
 
@@ -112,9 +119,9 @@ awards %>%
 
 ```
 
-# Peer-Reviewed Publications
+# Journal Articles
 
-```{r Publications}
+```{r JOUNRALARTICLES}
 bib <- bibliography_entries("publications.bib") %>%
   arrange(desc(issued))
 
@@ -124,6 +131,7 @@ bib
   
 ```
 
+\pagebreak
 # Presentations
 
 ```{r PRESENTATIONS}
@@ -138,4 +146,3 @@ presentations %>%
   )
 
 ```
-
