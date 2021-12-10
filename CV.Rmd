@@ -3,7 +3,7 @@ name: Tristan RH
 surname: Goodbody
 position: "Remote Sensing of Forests Specialist"
 address: "University of British Columbia, Vancouver"
-profilepic: "./img/me.jpg"
+#profilepic: "./img/me.jpg"
 phone: +604 992 1327
 email: "tristan.goodbody@ubc.ca"
 github: tgoodbody
@@ -85,19 +85,23 @@ education %>%
 \begin{cvskills}
   \cvskill
     {Data Science}
-    {R (Advanced: developed sgsR package), ArcPy}
+    {R (Advanced: developed sgsR package), LAStools, lidR, ENVI, ARC/QGIS, ArcPy}
 
   \cvskill
     {Research}
     {Forest modelling, inventory analysis, lidar processing, digital aerial photogrammetry, raster analysis}
+    
+  \cvskill
+    {Collaboration}
+    {Extensive work with academic, government, and industry representatives}
 
   \cvskill
     {Writing}
-    {Scientific publications, public reports, funding grants, reproducible reporting (Rmarkdown)}
+    {Scientific publications, public reports, funding grants, reproducible reporting (Rmarkdown, bookdown)}
     
   \cvskill
     {Communication}
-    {Confident public speaker, effective graphic design}  
+    {Confident public speaker, effective graphic design (Illustrator/inDesign)}  
 
   \cvskill
     {Languages}
@@ -131,7 +135,6 @@ bib
   
 ```
 
-\pagebreak
 # Presentations
 
 ```{r PRESENTATIONS}

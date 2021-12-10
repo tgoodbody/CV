@@ -33,7 +33,7 @@ experience <- tribble(
         \\item Mentor graduate students on remote sensing practices and routines
         \\item Developed lidar processing and analysis frameworks to enhance forest inventory knowledge
         \\item Developed a structurally guided sampling package sgsR
-        \\item Collaborated with international govnerment, industry, and academic partners
+        \\item Published in high impact journals with high rate of citations
     \\end{itemize}",
     "Teaching assistant", "Faculty of Forest Resources Management (UBC)", "May", 2015, "March", 2019, "Vancouver, BC",
     "Leading \\& supervising applied exercises to guide student knowledge of remote sensing concepts. \\begin{itemize}
