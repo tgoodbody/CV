@@ -7,7 +7,6 @@ education <- tribble(
     "Science and Management Major. \\begin{itemize}
         \\item Cons 330: Conservation Policy
         \\item FRST 443: Remote Sensing Of Ecosystem Management
-        \\item CONS 451: Integrated Field School
     \\end{itemize}"
 )
 
@@ -16,7 +15,7 @@ skills <- tribble(
     ~area, ~skills,
     "Project Management", "Effective Planning, Organization, Communication, Implementation",
     "Technical Writing", "Publications, Official Reports, Funding Grants",
-    "Data Analytics", " R, Management, Manipulation, Visualization, Interpretation",
+    "Data Analytics \\& Software Defelopment", " R, Management, Manipulation, Visualization, Interpretation",
     "Visual Communitation", "Effective Scientific Graphics and Design",
 )
 
@@ -30,9 +29,10 @@ experience <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
     "Post-Doctoral Fellow", "Faculty of Forest Resources Management (UBC)", "June", 2019, "Present", NA, "Vancouver, BC",
     "Assessment of wood attributes using remote sensing (AWARE) \\& Canadian Wood Fibre Center Forest Innovation Program. \\begin{itemize}
-        \\item Mentor graduate students on remote sensing practices and routines
+        \\item Mentored graduate students on remote sensing practices and routines
         \\item Developed lidar processing and analysis frameworks to enhance forest inventory knowledge
-        \\item Developed a structurally guided sampling package sgsR
+        \\item Initialized international committee (academic, government, industry) on structurally guided sampling
+        \\item Actively developing sgsR - Structurally guided sampling in R
         \\item Published in high impact journals with high rate of citations
     \\end{itemize}",
     "Teaching assistant", "Faculty of Forest Resources Management (UBC)", "May", 2015, "March", 2019, "Vancouver, BC",
@@ -40,14 +40,16 @@ experience <- tribble(
         \\item Guiding students to success in written and oral submissions 
         \\item FRST 443 - Remote sensing for ecosystem management
         \\item FRST 521 - Advanced earth observation and image processing
-        \\item Held weekly office hours, guest lectured, developed and graded assignments and research proposals
+        \\item Guest lectured on advanced remote sensing systems and data processing techniques
+        \\item Developed graduate labs \\& assignments
+        \\item Evaluated research proposals
     \\end{itemize}",
     "Planning Forester Intern - Co-op", "Chetwynd Forest Industries - West Fraser Mills LTD.", "May", 2014, "December", 2014, "Chetwynd, BC",
     "Working in a team and individually to implement West Fraser Management objectives. \\begin{itemize}
         \\item Site plan preparation
         \\item Harvest planning \\& layout
         \\item Silviculture assessments and reforestation quality inspections
-        \\item post-fire salvage planning and management
+        \\item Post-fire salvage planning and management
         \\item GIS management
         \\item Forest appraisals
     \\end{itemize}",
@@ -62,6 +64,8 @@ experience <- tribble(
 
 presentations <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+    "UBC - UTAS Workshop", "sgsR: A structurally guided sampling toolbox for lidar-based forest inventories", "April", 2022, NA, NA, "Hobart, Australia",
+    NA,
     "AWARE E-lecture Series", "Digital Photogrammetric Applications to Enhanced Forest Inventory", "October", 2019, NA, NA, "Online",
     NA,
     "Silvilaser", "Uncovering spatial and ecological variability in gap size frequency distributions in the Canadian boreal forest", "October", 2019, NA, NA, "Foz de Iguazu, Brazil",

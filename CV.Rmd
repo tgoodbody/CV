@@ -5,7 +5,7 @@ position: "Remote Sensing of Forests Specialist"
 address: "University of British Columbia, Vancouver"
 #profilepic: "./img/me.jpg"
 phone: +604 992 1327
-email: "tristan.goodbody@ubc.ca"
+email: "goodbody.t@gmail.com"
 github: tgoodbody
 twitter: GoodbodyT
 orcid: 0000-0002-6894-7925
@@ -50,6 +50,10 @@ source(file = here("r","data.r"))
 
 ```
 
+# About me
+
+I have 7 years of experience working with remote sensing data in the context of forest resources management and inventory. During that time I have successfully defended my PhD, collaborated with multiple levels of government, private industry, and academia, acted as a mentor for students of all levels of post-secondary education, and produced high impact science that continues to be operationalized. My work in developing a robust open-source tool for [structurally guided sampling ](https://tgoodbody.github.io/sgsR/) has received international and interdisciplinary acclaim and is being actively developed to continue to enhance forest inventories.
+
 # Experience
 
 ```{r Experience, results = "asis"}
@@ -64,6 +68,7 @@ experience %>%
   )
 
 ```
+\pagebreak
 
 # Education
 
@@ -78,22 +83,21 @@ education %>%
   )
 
 ```
-\pagebreak
 
 # Skills
 
 \begin{cvskills}
   \cvskill
     {Data Science}
-    {R (Advanced: developed sgsR package), LAStools, lidR, ENVI, ARC/QGIS, ArcPy}
+    {R (Advanced):, LAStools, lidR, ENVI, ARC/QGIS, ArcPy, Developed sgsR package}
 
   \cvskill
     {Research}
-    {Forest modelling, inventory analysis, lidar processing, digital aerial photogrammetry, raster analysis}
+    {Forest modelling, inventory analysis, lidar processing, digital aerial photogrammetry, raster \& vector analysis}
     
   \cvskill
     {Collaboration}
-    {Extensive work with academic, government, and industry representatives}
+    {Extensive work with international academic, government, and industry representatives}
 
   \cvskill
     {Writing}
@@ -123,7 +127,7 @@ awards %>%
 
 ```
 
-# Journal Articles
+# Peer-Reviewed Publications
 
 ```{r JOUNRALARTICLES}
 bib <- bibliography_entries("publications.bib") %>%
