@@ -89,7 +89,7 @@ education %>%
 \begin{cvskills}
   \cvskill
     {Data Science}
-    {R (Advanced):, LAStools, lidR, ENVI, ARC/QGIS, ArcPy, Developed sgsR package}
+    {R (Advanced), LAStools, lidR, ENVI, ARC/QGIS, ArcPy, Developed sgsR package}
 
   \cvskill
     {Research}

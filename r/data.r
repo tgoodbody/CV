@@ -29,20 +29,22 @@ experience <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
     "Post-Doctoral Fellow", "Faculty of Forest Resources Management (UBC)", "June", 2019, "Present", NA, "Vancouver, BC",
     "Assessment of wood attributes using remote sensing (AWARE) \\& Canadian Wood Fibre Center Forest Innovation Program. \\begin{itemize}
-        \\item Mentored graduate students on remote sensing practices and routines
+        \\item Initialized and maintained a two year international committee (academic, government, industry) to develop an open source sampling R package
+        \\item Maintain the sgsR package on CRAN and GitHub.
+        \\item Consulted with private industry and government to process and analyze lidar and digital photogrammetric data
+        \\item Collaborated with Canadian federal government to generate digital photogrammetric benchmarks for landscape level inventories
+        \\item Mentored graduate students in remote sensing procesing, analytics, scientific communication, \\& writing
+        \\item Contributed to multiple indepth literature reviews of remote sensing forest inventory practices and future directions
+        \\item Modelled potential human-wildife interactions, culturally important plant species, and using species distribution models
         \\item Developed lidar processing and analysis frameworks to enhance forest inventory knowledge
-        \\item Initialized international committee (academic, government, industry) on structurally guided sampling
-        \\item Actively developing sgsR - Structurally guided sampling in R
         \\item Published in high impact journals with high rate of citations
     \\end{itemize}",
     "Teaching assistant", "Faculty of Forest Resources Management (UBC)", "May", 2015, "March", 2019, "Vancouver, BC",
     "Leading \\& supervising applied exercises to guide student knowledge of remote sensing concepts. \\begin{itemize}
-        \\item Guiding students to success in written and oral submissions 
-        \\item FRST 443 - Remote sensing for ecosystem management
-        \\item FRST 521 - Advanced earth observation and image processing
+        \\item FRST 443 - Remote sensing for ecosystem management; FRST 521 - Advanced earth observation and image processing
+        \\item Guided students to success in written and oral submissions 
         \\item Guest lectured on advanced remote sensing systems and data processing techniques
-        \\item Developed graduate labs \\& assignments
-        \\item Evaluated research proposals
+        \\item Developed graduate labs and evaluated research proposals \\& assignments
     \\end{itemize}",
     "Planning Forester Intern - Co-op", "Chetwynd Forest Industries - West Fraser Mills LTD.", "May", 2014, "December", 2014, "Chetwynd, BC",
     "Working in a team and individually to implement West Fraser Management objectives. \\begin{itemize}
@@ -50,7 +52,6 @@ experience <- tribble(
         \\item Harvest planning \\& layout
         \\item Silviculture assessments and reforestation quality inspections
         \\item Post-fire salvage planning and management
-        \\item GIS management
         \\item Forest appraisals
     \\end{itemize}",
     "Planning Forester Intern - Co-op", "Alex Fraser Research Forest (UBC)", "May", 2013, "September", 2013, "Williams Lake, BC",
@@ -64,6 +65,8 @@ experience <- tribble(
 
 presentations <- tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+    "ForestSAT", "sgsR: structurally guided sampling", "September", 2022, NA, NA, "Berlin, Germany",
+    NA,
     "UBC - UTAS Workshop", "sgsR: A structurally guided sampling toolbox for lidar-based forest inventories", "April", 2022, NA, NA, "Hobart, Australia",
     NA,
     "AWARE E-lecture Series", "Digital Photogrammetric Applications to Enhanced Forest Inventory", "October", 2019, NA, NA, "Online",
