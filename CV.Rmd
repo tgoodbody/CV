@@ -1,7 +1,7 @@
 ---
 name: Tristan RH 
-surname: Goodbody
-position: "Remote Sensing of Forests Specialist"
+surname: Goodbody Ph.D.
+position: "Remote sensing of forests researcher"
 address: "University of British Columbia, Vancouver"
 #profilepic: "./img/me.jpg"
 phone: +604 992 1327
@@ -11,7 +11,7 @@ twitter: GoodbodyT
 orcid: 0000-0002-6894-7925
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: 414141
-docname: CV
+docname: curriculum vitae
 output: vitae::awesomecv
 editor_options: 
   chunk_output_type: console
@@ -52,7 +52,32 @@ source(file = here("r","data.r"))
 
 # About me
 
-I have 7 years of experience working with remote sensing data in the context of forest resources management and inventory. During that time I have successfully defended my PhD, collaborated with multiple levels of government, private industry, and academia, acted as a mentor for students of all levels of post-secondary education, and produced high impact science that continues to be operationalized. My work in developing a robust open-source tool for [structurally guided sampling ](https://tgoodbody.github.io/sgsR/) has received international and interdisciplinary acclaim and is being actively developed to continue to enhance forest inventories.
+8 years experience and doctorate in remote sensing, machine learning and data fusion in the context of forest inventory and resources management. Collaborating with multiple levels in government, private industry and academia. Producing high impact science that continues to be operationalized. Mentoring students of all levels of post-secondary education in remote sensing, data science and forest management.
+
+# Research Interests
+
+\begin{cvskills}
+  \cvskill
+    {Forest Management}
+    {Forest attribute mapping, forest mensuration \& sampling}
+
+  \cvskill
+    {Remote sensing}
+    {Airborne lidar \& digital photogrammetric point clouds, drone-based datasets, sattellite imagery}
+    
+  \cvskill
+    {Data science}
+    {Predictive modelling, spatial data, reproducible science}
+    
+  \cvskill
+    {Enhanced forest inventory}
+    {Integrating remotely sensed data into forest management and planning frameworks}
+    
+  \cvskill
+    {Ecosystem processes and function}
+    {Vegetation structure, flora and fauna, disturbances \& climate change}
+    
+\end{cvskills}
 
 # Experience
 
@@ -84,32 +109,51 @@ education %>%
 
 ```
 
-# Skills
+# Applied Skills
 
 \begin{cvskills}
-  \cvskill
-    {Data Science}
-    {R (Advanced), LAStools, lidR, ENVI, ARC/QGIS, ArcPy, Developed sgsR package}
 
   \cvskill
-    {Research}
-    {Forest modelling, inventory analysis, lidar processing, digital aerial photogrammetry, raster \& vector analysis}
+    {Remote Sensing}
+    {Forest attribute modelling, point cloud processing, digital aerial photogrammetry, drone data sets}
+
+  \cvskill
+    {Data Science}
+    {R (Advanced), machine learning, image processing, ecological modelling, inventory analysis, software development}
     
   \cvskill
     {Collaboration}
-    {Extensive work with international academic, government, and industry representatives}
+    {International academic, government, and industry representatives}
 
   \cvskill
     {Writing}
-    {Scientific publications, public reports, funding grants, reproducible reporting (Rmarkdown, bookdown)}
+    {Scientific publications, public reports, funding grants, reproducible reporting}
     
   \cvskill
     {Communication}
-    {Confident public speaker, effective graphic design (Illustrator/inDesign)}  
+    {Confident public speaker, graduate student mentor, effective graphic design}  
+    
+\end{cvskills}
+
+# Soft Skills
+
+\begin{cvskills}
+  \cvskill
+    {Personal}
+    {Accountable, adaptable, assertive, confident, dependable, diligent, enthusiastic, friendly, reliable, respectful, positive}
 
   \cvskill
+    {Social}
+    {Conflict resolution, emotionally \& culturally intelligent, equitable, leadership, inclusive, negotiation, team-building}
+    
+  \cvskill
+    {Methodological}
+    {Analytical, proactive, problem-solving, organized, time management, work ethic}
+    
+  \cvskill
     {Languages}
-    {English/Spanish (bilingual)}
+    {English/Spanish, German (basic)}
+    
 \end{cvskills}
 
 # Awards
@@ -129,6 +173,17 @@ awards %>%
 
 # Peer-Reviewed Publications
 
+\begin{cvskills}
+  \cvskill
+    {Google Scholar}
+    {Total citations: 1135  , h-index: 17}
+    
+  \cvskill
+    {Web of Science}
+    {Total citations: 745  , h-index: 13}
+    
+\end{cvskills}
+
 ```{r JOUNRALARTICLES}
 bib <- bibliography_entries("publications.bib") %>%
   arrange(desc(issued))
@@ -139,17 +194,62 @@ bib
   
 ```
 
-# Presentations
+# Software & Guides
+
+```{r SOFTWARE}
+bib <- bibliography_entries("software.bib")
+
+bib
+  
+```
+
+# Conferences
 
 ```{r PRESENTATIONS}
 
-presentations %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    why = detail,
-    when = glue::glue("{startMonth} {startYear}",.na = ""),
-    where = where, .protect = F
-  )
+p <- presentations  %>%
+    filter(detail == "Conference") %>%
+    mutate(detail = NA)
+    
+p %>%
+detailed_entries(
+with = title,
+what = unit,
+why = detail,
+when = glue::glue("{startMonth} {startYear}",.na = ""),
+where = where, .protect = F
+)
 
 ```
+
+# Teaching & Instructional Workshop Experience
+
+```{r TEACHING}
+
+p <- presentations %>%
+    filter(detail == "Workshop") %>%
+    mutate(detail = NA)
+    
+p %>%
+detailed_entries(
+with = title,
+what = unit,
+why = detail,
+when = glue::glue("{startMonth} {startYear}",.na = ""),
+where = where, .protect = F
+)
+
+```
+
+# International Journals
+
+\begin{cvskills}
+  \cvskill
+    {Reviewer}
+    {ISPRS Journal of Photogrammetry and Remote Sensing,  Forest Ecosystems,  Forestry Chronicle,  Remote Sensing  }
+    
+  \cvskill
+    {Guest Editor}
+    {Remote Sensing Special Issue: Aerial and Near-Field Remote Sensing Developments in Forestry}
+    
+\end{cvskills}
